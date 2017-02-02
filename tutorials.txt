@@ -1,0 +1,8 @@
+1- Vanilla Flask Api
+	https://blog.miguelgrinberg.com/post/designing-a-restful-api-with-python-and-flask
+
+2- Javascript Client
+	https://blog.miguelgrinberg.com/post/writing-a-javascript-rest-client
+
+3- Using RestFull library to write the app
+	https://blog.miguelgrinberg.com/post/designing-a-restful-api-using-flask-restful

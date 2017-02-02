@@ -1,7 +1,12 @@
 from flask import Flask, jsonify, abort, make_response, request, url_for
 from flask.ext.httpauth import HTTPBasicAuth
+# for make cross origin ajax request
+from flask_cors import CORS, cross_origin
 auth = HTTPBasicAuth()
 app = Flask(__name__)
+app.config["SECRET_KEY"] = "super secret 007"
+# init cors
+CORS(app)
 """
 	Security 
 

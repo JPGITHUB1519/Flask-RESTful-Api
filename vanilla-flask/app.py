@@ -58,7 +58,7 @@ def not_found(error):
 # get all tasks
 @app.route('/todo/api/v1.0/tasks/', methods=['GET'])
 # requires authentication!
-@auth.login_required
+# @auth.login_required
 def getTasks():
 	return jsonify({'tasks': [make_public_task(task) for task in tasks]})
 
@@ -117,7 +117,12 @@ def deleteTask(task_id):
 	if len(task) == 0:
 		abort(404)
 	tasks.remove(task[0])
-	return jsonify({'result': True})		
+	return jsonify({'result': True})	
+
+@app.route('/test')
+def test():
+
+	return jsonify({'id': '1', 'content': 'Hola Mundo'})	
 
 if __name__=='__main__':
 	app.run(debug=True)
